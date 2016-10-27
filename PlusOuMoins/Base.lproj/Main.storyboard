@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Un nombre mystère a été chosi ! Devine le !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2t-Mz-vwv">
+                                <rect key="frame" x="40" y="15" width="540" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="0fA-Qb-JUy">
+                                <rect key="frame" x="18" y="59" width="564" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="valueSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="R9g-7O-ewT"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omp-ro-6Ba">
+                                <rect key="frame" x="20" y="92" width="560" height="139"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="116"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDS-Ws-h3T">
+                                <rect key="frame" x="20" y="203" width="560" height="70"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="pb4-uj-QY9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSo-wL-Isb">
+                                <rect key="frame" x="20" y="528" width="560" height="42"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Nouveau nombre"/>
+                                <connections>
+                                    <action selector="newNombre:" destination="BYZ-38-t0r" eventType="touchDown" id="ZGp-SB-y5G"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu chauffes ! " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coi-iB-LgX" userLabel="Label Chauffe">
+                                <rect key="frame" x="20" y="486" width="560" height="46"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <color key="textColor" red="0.0047888946120000003" green="0.70476112570000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0fA-Qb-JUy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="0DA-BT-UaB"/>
+                            <constraint firstItem="Y2t-Mz-vwv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="0TE-qF-rhT"/>
+                            <constraint firstItem="Coi-iB-LgX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0bc-Vq-vFf"/>
+                            <constraint firstItem="lSo-wL-Isb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6Ly-zf-z0G"/>
+                            <constraint firstItem="0fA-Qb-JUy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6vw-in-cIr"/>
+                            <constraint firstItem="Omp-ro-6Ba" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="A0z-tF-iYs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lSo-wL-Isb" secondAttribute="trailing" id="Moj-Dp-A84"/>
+                            <constraint firstItem="Omp-ro-6Ba" firstAttribute="top" secondItem="0fA-Qb-JUy" secondAttribute="bottom" constant="3" id="QDY-TH-q8H"/>
+                            <constraint firstItem="gDS-Ws-h3T" firstAttribute="top" secondItem="0fA-Qb-JUy" secondAttribute="bottom" constant="114" id="SVJ-L0-Ngi"/>
+                            <constraint firstItem="Y2t-Mz-vwv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UNB-Ok-0wH"/>
+                            <constraint firstItem="0fA-Qb-JUy" firstAttribute="top" secondItem="Y2t-Mz-vwv" secondAttribute="bottom" constant="23" id="UPH-eZ-gHv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lSo-wL-Isb" secondAttribute="bottom" constant="30" id="Vxk-z6-r3Q"/>
+                            <constraint firstItem="gDS-Ws-h3T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Zh7-Dk-sjW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Omp-ro-6Ba" secondAttribute="trailing" id="daP-hy-fsR"/>
+                            <constraint firstItem="lSo-wL-Isb" firstAttribute="top" secondItem="Coi-iB-LgX" secondAttribute="bottom" constant="-4" id="hHa-3W-fxO"/>
+                            <constraint firstItem="Y2t-Mz-vwv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="15" id="mRV-FF-loA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Coi-iB-LgX" secondAttribute="trailing" id="npk-Z1-WpH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gDS-Ws-h3T" secondAttribute="trailing" id="psg-FU-QxH"/>
+                            <constraint firstItem="Coi-iB-LgX" firstAttribute="top" secondItem="gDS-Ws-h3T" secondAttribute="bottom" constant="10" id="vfk-Wz-01U"/>
+                            <constraint firstItem="Coi-iB-LgX" firstAttribute="top" secondItem="gDS-Ws-h3T" secondAttribute="bottom" constant="80" id="wTa-mV-Jto"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="vfk-Wz-01U"/>
+                                <exclude reference="wTa-mV-Jto"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="labelChauffe" destination="Coi-iB-LgX" id="o84-Kn-lAI"/>
+                        <outlet property="labelResult" destination="gDS-Ws-h3T" id="RjT-pg-hV4"/>
+                        <outlet property="labelSelected" destination="Omp-ro-6Ba" id="4Xj-Wd-DF6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="490"/>
+        </scene>
+    </scenes>
+</document>
